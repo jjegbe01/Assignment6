@@ -2,13 +2,22 @@
 <html ng-app="gemStore">
   <head>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-    <script type="text/javascript" src="js/angular.min.js"></script>
-    <script type="text/javascript" src="app.js"></script>
-	<script type="text/javascript" src="tutorial.json"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
+	 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+	$.getJSON("https://raw.githubusercontent.com/wesreisz/angular-homework2/master/tutorials.json", function(data){
+		for(var i in data){
+			$('#content').append(data[i]);	
+			}	
+			});
+		});
+	</script>
   </head>
 
   <body>
-    
+ 
+ I am {{1+2}}
     
   </body>
 </html>
