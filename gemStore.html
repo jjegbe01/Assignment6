@@ -17,7 +17,7 @@ I am {{1+2}}
     <!--  Products Container  -->
     
       <!--  Product Container  -->
-      <div class="list-group-item" ng-repeat="product in store.products">
+      <div ng-repeat="product in store.products">
         <h3>{{product.title}} <em class="pull-right">{{product.image}}</em></h3>
 		{{product.url}} <em class="pull-right">{{product.author}}</em>
       </div>
