@@ -17,11 +17,13 @@ I am {{1+2}}
     <!--  Products Container  -->
     
       <!--  Product Container  -->
-      <div class="col-md-offset-2 col-md-8" ng-repeat="product in store.products">
+      <div class="col-md-offset-2 col-md-8">
+	  <div  ng-repeat="product in store.products">
 	  
         <h3>{{product.title}} {{product.image}}</h3>
 		{{product.url}} {{product.author}}
       
+	  </div>
 	  </div>
 
     
