@@ -12,12 +12,15 @@
 
   <body ng-controller="StoreController as store">
     <!--  Store Header  -->
-   
-I am {{1+2}}
+<header>
+<h1>Assignment 6</h1>
+</header>   
+
     <!--  Products Container  -->
     
       <!--  Product Container  -->
-      <div class="col-md-offset-2 col-md-8">
+      <div class="col-md-offset-1 col-md-10">
+	  
 	  <div  ng-repeat="product in store.products">
 	  
         <h3>{{product.title}} {{product.image}}</h3>
