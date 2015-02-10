@@ -23,11 +23,8 @@
       <div class="list-group-item" ng-repeat="product in store.products">
         <h3>{{product.title}} <em class="pull-right">{{product.url}}</em></h3>
 
-        <!-- Image Gallery  -->
-        <product-gallery></product-gallery>
+	   <h3>{{product.image}} <em class="pull-right">{{product.author}}</em></h3>
 
-        <!-- Product Tabs  -->
-        <product-tabs></product-tabs>
       </div>
 
     </div>
