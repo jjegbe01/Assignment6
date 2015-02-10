@@ -12,21 +12,16 @@
 
   <body ng-controller="StoreController as store">
     <!--  Store Header  -->
-    <header>
-      <h1 class="text-center">Flatlander Crafted Gems</h1>
-      <h2 class="text-center">? an Angular store ?</h2>
-    </header>
-
+   
+I am {{1+2}}
     <!--  Products Container  -->
-    <div class="list-group">
+    
       <!--  Product Container  -->
       <div class="list-group-item" ng-repeat="product in store.products">
-        <h3>{{product.title}} <em class="pull-right">{{product.url}}</em></h3>
-
-	   <img src="{{product.image}}" alt="Smiley face" height="42" width="42"></img> <em class="pull-right">{{product.author}}</em></h3>
-
+        <h3>{{product.title}} <em class="pull-right">{{product.image}}</em></h3>
+		{{product.url}} <em class="pull-right">{{product.author}}</em>
       </div>
 
-    </div>
+    
   </body>
 </html>
