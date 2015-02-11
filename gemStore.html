@@ -13,16 +13,11 @@
     
     <script type="text/javascript" src="products.js"></script>
     <script type="text/javascript" src="app.js"></script>
-	<script>
-	$(document).ready(function() {
-    $('#example').DataTable();
-	} );
-</script>
   </head>
 
   <body ng-controller="StoreController as store">
 
-				<table ng-controller="StoreController as store" id="example" class="stripe" width="100%" cellspacing="0">
+				<table id="example" class="stripe" width="100%" cellspacing="0">
 						<thead>
 							<tr>
 								<th>Title</th>
@@ -58,13 +53,9 @@
       
 	  
 	  <div  ng-repeat="product in store.products">
-	  
-			<tr>
-                <td>{{product.title}}</td>
-                <td><img src="{{product.image}}" height="25px" width="25px"></td>
-                <td>{{product.url}}</td>
-                <td>{{product.author}}</td>
-            </tr>
+		<div class="row">
+		<div class=
+		</div>
 		
 		<!--<h3>{{product.title}}</h3>  <img src="{{product.image}}" height="auto" width="auto"> 
 		{{product.url}} {{product.author}}-->
@@ -72,7 +63,13 @@
 	  </div>
 	  
 	  </div>
-
-    
+	
   </body>
+  <footer>
+  <script>
+	$(document).ready(function() {
+    $('#example').DataTable();
+	} );
+</script>
+  </footer>
 </html>
