@@ -100,36 +100,47 @@
 					<p><i>"AngularJS is a structural framework for dynamic web apps. It lets you use HTML as your template language and lets you extend HTML's syntax to express your 
 					application's components clearly and succinctly. Angular's data binding and dependency injection eliminate much of the code you would otherwise have to write."</i></p>
                     
-					
+					<p>In other words, its a widely used javascript library which allows for a <i>lot</i> of functionality, and saves you from having to write a <i>lot</i> of code.</p>
                     <h2 class="section-heading">Example</h2>
+					<p>Lets look at an example, once again courtesy of Angular's <a href="https://docs.angularjs.org/guide">official documentation</a>.</p>
+					<p>In this example, we'll be building a very simple web based invoice form. It will contain:</p>
+					<ul>
+						<li>A text field for quantity, which can be incremented.</li>
+						<li>A text field for costs, which can also be incremented.</li>
+						<li>A Total field, which will be calculated and updated in real time.</li>
+					</ul>
+					<p>Normally, this project would take quite a bit of code to accomplish. However, through the use of AngularJS, we can build it in just a few minutes by
+					expanding our HTML's functionality through the use of AngularJS.</p>
+					
 					<!--Pasted in example-->
-					<div class="ng-scope">
-  <a ng-click="openPlunkr('examples/example-guide-concepts-1')" class="btn pull-right">
-    <i class="glyphicon glyphicon-edit">&nbsp;</i>
-    Edit in Plunker</a>
+											<div class="ng-scope">
+						  <a ng-click="openPlunkr('examples/example-guide-concepts-1')" class="btn pull-right">
+							<i class="glyphicon glyphicon-edit">&nbsp;</i>
+							Edit in Plunker</a>
 
-  <div class="runnable-example ng-scope" path="examples/example-guide-concepts-1" name="guide-concepts-1" ng-app-included="true"><!-- ngIf: tabs --><nav class="runnable-example-tabs ng-scope" ng-if="tabs">  <!-- ngRepeat: tab in tabs track by $index --><a ng-class="{active:$index==activeTabIndex}" ng-repeat="tab in tabs track by $index" href="" class="btn ng-binding ng-scope active" ng-click="setTab($index)">    index.html  </a><!-- end ngRepeat: tab in tabs track by $index --></nav><!-- end ngIf: tabs -->
+						  <div class="runnable-example ng-scope" path="examples/example-guide-concepts-1" name="guide-concepts-1" ng-app-included="true"><!-- ngIf: tabs --><nav class="runnable-example-tabs ng-scope" ng-if="tabs">  <!-- ngRepeat: tab in tabs track by $index --><a ng-class="{active:$index==activeTabIndex}" ng-repeat="tab in tabs track by $index" href="" class="btn ng-binding ng-scope active" ng-click="setTab($index)">    index.html  </a><!-- end ngRepeat: tab in tabs track by $index --></nav><!-- end ngIf: tabs -->
 
-  
-    <div style="display: block;" class="runnable-example-file" name="index.html" language="html" type="html">
-      <pre><code><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-app</span><span class="pln"> </span><span class="atn">ng-init</span><span class="pun">=</span><span class="atv">"qty=1;cost=2"</span><span class="tag">&gt;</span><span class="pln">
-  </span><span class="tag">&lt;b&gt;</span><span class="pln">Invoice:</span><span class="tag">&lt;/b&gt;</span><span class="pln">
-  </span><span class="tag">&lt;div&gt;</span><span class="pln">
-    Quantity: </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"number"</span><span class="pln"> </span><span class="atn">min</span><span class="pun">=</span><span class="atv">"0"</span><span class="pln"> </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">"qty"</span><span class="tag">&gt;</span><span class="pln">
-  </span><span class="tag">&lt;/div&gt;</span><span class="pln">
-  </span><span class="tag">&lt;div&gt;</span><span class="pln">
-    Costs: </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"number"</span><span class="pln"> </span><span class="atn">min</span><span class="pun">=</span><span class="atv">"0"</span><span class="pln"> </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">"cost"</span><span class="tag">&gt;</span><span class="pln">
-  </span><span class="tag">&lt;/div&gt;</span><span class="pln">
-  </span><span class="tag">&lt;div&gt;</span><span class="pln">
-    </span><span class="tag">&lt;b&gt;</span><span class="pln">Total:</span><span class="tag">&lt;/b&gt;</span><span class="pln"> {{qty * cost | currency}}
-  </span><span class="tag">&lt;/div&gt;</span><span class="pln">
-</span><span class="tag">&lt;/div&gt;</span></code></pre>
-    </div>
-  
+						  
+							<div style="display: block;" class="runnable-example-file" name="index.html" language="html" type="html">
+							  <pre><code><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-app</span><span class="pln"> </span><span class="atn">ng-init</span><span class="pun">=</span><span class="atv">"qty=1;cost=2"</span><span class="tag">&gt;</span><span class="pln">
+						  </span><span class="tag">&lt;b&gt;</span><span class="pln">Invoice:</span><span class="tag">&lt;/b&gt;</span><span class="pln">
+						  </span><span class="tag">&lt;div&gt;</span><span class="pln">
+							Quantity: </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"number"</span><span class="pln"> </span><span class="atn">min</span><span class="pun">=</span><span class="atv">"0"</span><span class="pln"> </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">"qty"</span><span class="tag">&gt;</span><span class="pln">
+						  </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+						  </span><span class="tag">&lt;div&gt;</span><span class="pln">
+							Costs: </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"number"</span><span class="pln"> </span><span class="atn">min</span><span class="pun">=</span><span class="atv">"0"</span><span class="pln"> </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">"cost"</span><span class="tag">&gt;</span><span class="pln">
+						  </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+						  </span><span class="tag">&lt;div&gt;</span><span class="pln">
+							</span><span class="tag">&lt;b&gt;</span><span class="pln">Total:</span><span class="tag">&lt;/b&gt;</span><span class="pln"> {{qty * cost | currency}}
+						  </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+						</span><span class="tag">&lt;/div&gt;</span></code></pre>
+							</div>
+						  
 
-    <iframe class="runnable-example-frame" src="angularExample.html" name="example-guide-concepts-1"></iframe>
-  </div>
-</div>
+							<!--This is referencing a local copy of the example file-->
+							<iframe class="runnable-example-frame" src="angularExample.html" name="example-guide-concepts-1"></iframe>
+						  </div>
+						</div>
 					<!--Pasted in example-->
                     
                 </div>
