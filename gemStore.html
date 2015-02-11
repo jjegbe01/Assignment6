@@ -10,6 +10,11 @@
     
     <script type="text/javascript" src="products.js"></script>
     <script type="text/javascript" src="app.js"></script>
+	<script>
+	$(document).ready(function() {
+    $('#example').DataTable();
+	} );
+</script>
   </head>
 
   <body ng-controller="StoreController as store">
@@ -32,6 +37,7 @@
                 <th>Author</th>
             </tr>
         </tfoot>
+</table>
     <!--  Products Container  -->
     
       <!--  Product Container  -->
@@ -43,7 +49,7 @@
 		{{product.url}} {{product.author}}
       
 	  </div>
-	  </table>
+	  
 	  </div>
 
     
