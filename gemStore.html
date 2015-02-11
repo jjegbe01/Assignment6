@@ -14,7 +14,24 @@
 
   <body ng-controller="StoreController as store">
   
-
+<table id="example" class="display" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Image</th>
+                <th>URL</th>
+                <th>Author</th>
+            </tr>
+        </thead>
+ 
+        <tfoot>
+            <tr>
+                <th>Title</th>
+                <th>Image</th>
+                <th>URL</th>
+                <th>Author</th>
+            </tr>
+        </tfoot>
     <!--  Products Container  -->
     
       <!--  Product Container  -->
@@ -26,6 +43,7 @@
 		{{product.url}} {{product.author}}
       
 	  </div>
+	  </table>
 	  </div>
 
     
