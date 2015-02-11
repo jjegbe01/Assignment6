@@ -65,8 +65,15 @@
 	  
 	  <div  ng-repeat="product in store.products">
 	  
-        <h3>{{product.title}}</h3>  <img src="{{product.image}}" height="auto" width="auto"> 
-		{{product.url}} {{product.author}}
+        <tr>
+                <td>{{product.title}}</td>
+                <td><img src="{{product.image}}" height="25px" width="25px"></td>
+                <td>{{product.url}}</td>
+                <td>{{product.author}}</td>
+            </tr>
+		
+		<!--<h3>{{product.title}}</h3>  <img src="{{product.image}}" height="auto" width="auto"> 
+		{{product.url}} {{product.author}}-->
       
 	  </div>
 	  
