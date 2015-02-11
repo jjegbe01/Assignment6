@@ -33,32 +33,6 @@
                     
                 </ul>
 	</div>
-
-				<table ng-controller="StoreController as store" id="example" class="stripe" width="100%" cellspacing="0">
-					<thead>
-					<tr>
-					  <th>Image</th>
-					  <th>Author</th>
-					  <th>Title</th>
-					  <th>URL</th>
-					</tr>
-				  </thead>
-				  <tbody>
-				  
-						<tr ng-repeat="product in store.products">
-						  <td><img src="{{product.image}}" height="25px" width="25px"></td>
-						  <td>{{product.title}}</td>
-						  <td>{{product.url}}</td>
-						  <td>{{product.author}}</td>
-						</tr>
-					
-				  </tbody>
-				</table>
-    <!--  Products Container  -->
-    
-      <!--  Product Container  -->
-      <br />
-	  <br />
 	  
 	  <table ng-controller="StoreController as store" class="table table-striped">
       <thead>
@@ -81,19 +55,6 @@
       </tbody>
     </table>
 	  
-	  <!--<div  ng-repeat="product in store.products">-->
-		
-		<!--<div class="row">
-		<div class="col-md-3">{{product.title}}</div>
-		<div class="col-md-3"><img src="{{product.image}}" height="25px" width="25px"></div>
-		<div class="col-md-3">{{product.url}}</div>
-		<div class="col-md-3">{{product.author}}</div>
-		</div>-->
-		
-		<!--<h3>{{product.title}}</h3>  <img src="{{product.image}}" height="auto" width="auto"> 
-		{{product.url}} {{product.author}}-->
-      
-	  <!--</div>-->
 	  
 	  
 	
