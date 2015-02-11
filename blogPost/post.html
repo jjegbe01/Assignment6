@@ -142,6 +142,19 @@
 						  </div>
 						</div>
 					<!--Pasted in example-->
+					
+					<p>Lets evaluate our example, one step at a time.</p>
+					<p>First, let us establish that we have two text fields: Quantity and and Cost. Each are created with an input tag, with a define type of "number." 
+					Upon looking at our code, we can see that each of these fields is given the name "qty" and "cost" within something called "ng-model".</p>
+					<p>"ng-model" is our first example of what we call a <b>Directive</b> in Angular. Put simply, a directive is a marker attached to an HTML element that
+					tells Angular how to treat it. In our case, the ng-model directive is used to bind an input, select, or textarea element to a property.</p>
+					<p>Lets move to the top of the code. At the top of the example, we see something called "ng-init." This is another directive, which allows us to evaluate
+					the contents of a given property. Since it has access to our two text fields through the use of ng-model, we can use it to initiate those two text fields with
+					default values (qty = 1, cost = 2.)</p>
+					<p>Finaly, we move to the end of the example. Towards the bottom, you'll see our Total field. Inside of a set of double curly braces "{{ }}",
+					we see a mathematical statement: qty * cost. This is clearly the calculation needed to evaluate our previous two fields. However, by placing this inside of
+					a set of double curly braces, we tell Angular that we want it to evaluate that expression for us. At the end of that statement, we see a pipe ( | ) followed
+					by the word "currecny." By placing these within the braces, but after our equation, we're telling Angular to automatically display the results in a monetary format.</p>
                     
                 </div>
             </div>
