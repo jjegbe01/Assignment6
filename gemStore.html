@@ -42,12 +42,14 @@
         </tfoot>
 		
 		<tbody>
-            <tr ng-repeat="product in store.products">
+		<div ng-repeat="product in store.products">
+            <tr>
                 <td>{{product.title}}</td>
                 <td><img src="{{product.image}}" height="25px" width="25px"></td>
                 <td>{{product.url}}</td>
                 <td>{{product.author}}</td>
             </tr>
+		</div>
             <tr>
                 <td>Example Title 1</td>
                 <td>Example Image 1</td>
