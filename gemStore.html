@@ -13,6 +13,11 @@
     
     <script type="text/javascript" src="products.js"></script>
     <script type="text/javascript" src="app.js"></script>
+	<script>
+	$(window).load(function() {
+    $('#example').DataTable();
+	} );
+	</script>
   </head>
 
   <body ng-controller="StoreController as store">
@@ -54,7 +59,10 @@
 	  
 	  <div  ng-repeat="product in store.products">
 		<div class="row">
-		<div class="col-md-4" style="color=red;"></div>
+		<div class="col-md-3">TEST</div>
+		<div class="col-md-3">TEST</div>
+		<div class="col-md-3">TEST</div>
+		<div class="col-md-3">TEST</div>
 		</div>
 		
 		<!--<h3>{{product.title}}</h3>  <img src="{{product.image}}" height="auto" width="auto"> 
@@ -62,14 +70,9 @@
       
 	  </div>
 	  
-	  </div>
+	  
 	
   </body>
-  <footer>
-  <script>
-	$(document).ready(function() {
-    $('#example').DataTable();
-	} );
-</script>
-  </footer>
+  
+  
 </html>
