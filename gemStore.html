@@ -70,7 +70,6 @@
       <br />
 	  <br />
 	  
-	  <div ng-repeat="product in store.products">
 	  <table class="table table-striped">
       <thead>
         <tr>
@@ -80,6 +79,7 @@
           <th>URL</th>
         </tr>
       </thead>
+	  <div ng-repeat="product in store.products">
       <tbody>
 	  
 			<tr>
@@ -90,8 +90,9 @@
 			</tr>
 		
       </tbody>
+	  	</div>
+
     </table>
-	</div>
 	  
 	  <!--<div  ng-repeat="product in store.products">-->
 		
