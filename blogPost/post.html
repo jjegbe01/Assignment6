@@ -104,32 +104,32 @@
                     <h2 class="section-heading">Example</h2>
 					<!--Pasted in example-->
 					<div class="ng-scope">
-					  <a ng-click="openPlunkr('examples/example-guide-concepts-1')" class="btn pull-right">
-						<i class="glyphicon glyphicon-edit">&nbsp;</i>
-						Edit in Plunker</a>
+  <a ng-click="openPlunkr('examples/example-guide-concepts-1')" class="btn pull-right">
+    <i class="glyphicon glyphicon-edit">&nbsp;</i>
+    Edit in Plunker</a>
 
-					  <div class="runnable-example ng-scope" path="examples/example-guide-concepts-1" name="guide-concepts-1" ng-app-included="true"><!-- ngIf: tabs --><nav class="runnable-example-tabs ng-scope" ng-if="tabs">  <!-- ngRepeat: tab in tabs track by $index --><a ng-class="{active:$index==activeTabIndex}" ng-repeat="tab in tabs track by $index" href="" class="btn ng-binding ng-scope active" ng-click="setTab($index)">    index.html  </a><!-- end ngRepeat: tab in tabs track by $index --></nav><!-- end ngIf: tabs -->
+  <div class="runnable-example ng-scope" path="examples/example-guide-concepts-1" name="guide-concepts-1" ng-app-included="true"><!-- ngIf: tabs --><nav class="runnable-example-tabs ng-scope" ng-if="tabs">  <!-- ngRepeat: tab in tabs track by $index --><a ng-class="{active:$index==activeTabIndex}" ng-repeat="tab in tabs track by $index" href="" class="btn ng-binding ng-scope active" ng-click="setTab($index)">    index.html  </a><!-- end ngRepeat: tab in tabs track by $index --></nav><!-- end ngIf: tabs -->
 
-					  
-						<div style="display: block;" class="runnable-example-file" name="index.html" language="html" type="html">
-						  <pre><code><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-app</span><span class="pln"> </span><span class="atn">ng-init</span><span class="pun">=</span><span class="atv">"qty=1;cost=2"</span><span class="tag">&gt;</span><span class="pln">
-					  </span><span class="tag">&lt;b&gt;</span><span class="pln">Invoice:</span><span class="tag">&lt;/b&gt;</span><span class="pln">
-					  </span><span class="tag">&lt;div&gt;</span><span class="pln">
-						Quantity: </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"number"</span><span class="pln"> </span><span class="atn">min</span><span class="pun">=</span><span class="atv">"0"</span><span class="pln"> </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">"qty"</span><span class="tag">&gt;</span><span class="pln">
-					  </span><span class="tag">&lt;/div&gt;</span><span class="pln">
-					  </span><span class="tag">&lt;div&gt;</span><span class="pln">
-						Costs: </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"number"</span><span class="pln"> </span><span class="atn">min</span><span class="pun">=</span><span class="atv">"0"</span><span class="pln"> </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">"cost"</span><span class="tag">&gt;</span><span class="pln">
-					  </span><span class="tag">&lt;/div&gt;</span><span class="pln">
-					  </span><span class="tag">&lt;div&gt;</span><span class="pln">
-						</span><span class="tag">&lt;b&gt;</span><span class="pln">Total:</span><span class="tag">&lt;/b&gt;</span><span class="pln"> {{qty * cost | currency}}
-					  </span><span class="tag">&lt;/div&gt;</span><span class="pln">
-					</span><span class="tag">&lt;/div&gt;</span></code></pre>
-						</div>
-					  
+  
+    <div style="display: block;" class="runnable-example-file" name="index.html" language="html" type="html">
+      <pre><code><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-app</span><span class="pln"> </span><span class="atn">ng-init</span><span class="pun">=</span><span class="atv">"qty=1;cost=2"</span><span class="tag">&gt;</span><span class="pln">
+  </span><span class="tag">&lt;b&gt;</span><span class="pln">Invoice:</span><span class="tag">&lt;/b&gt;</span><span class="pln">
+  </span><span class="tag">&lt;div&gt;</span><span class="pln">
+    Quantity: </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"number"</span><span class="pln"> </span><span class="atn">min</span><span class="pun">=</span><span class="atv">"0"</span><span class="pln"> </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">"qty"</span><span class="tag">&gt;</span><span class="pln">
+  </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+  </span><span class="tag">&lt;div&gt;</span><span class="pln">
+    Costs: </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"number"</span><span class="pln"> </span><span class="atn">min</span><span class="pun">=</span><span class="atv">"0"</span><span class="pln"> </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">"cost"</span><span class="tag">&gt;</span><span class="pln">
+  </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+  </span><span class="tag">&lt;div&gt;</span><span class="pln">
+    </span><span class="tag">&lt;b&gt;</span><span class="pln">Total:</span><span class="tag">&lt;/b&gt;</span><span class="pln"> {{qty * cost | currency}}
+  </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;/div&gt;</span></code></pre>
+    </div>
+  
 
-						<iframe class="runnable-example-frame" src="examples/example-guide-concepts-1/index.html" name="example-guide-concepts-1"></iframe>
-					  </div>
-					</div>
+    <iframe class="runnable-example-frame" src="examples/example-guide-concepts-1/index.html" name="example-guide-concepts-1"></iframe>
+  </div>
+</div>
 					<!--Pasted in example-->
                     
                 </div>
