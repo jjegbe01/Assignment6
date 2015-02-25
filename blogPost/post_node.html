@@ -107,6 +107,15 @@
 					apart from more traditional languages, which are based heavily on the idea of sequential execution.</p>
 					<p>To demonstrate this clearly, we'll use a code sample pulled from a wonderful Node.js tutorial hosted 
 					over at <a href="https://www.airpair.com/javascript/node-js-tutorial#1-1-what-s-making-node-more-popular-than-rails-and-other-alternatives-">airpair.<a></p>
+					
+					<pre class="line-numbers language-javascript"><code data-language="javascript" class=" language-javascript"><span class="token keyword">var</span> http <span class="token operator">=</span> <span class="token function">require<span class="token punctuation">(</span></span><span class="token string">'http'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+					http<span class="token punctuation">.</span><span class="token function">request<span class="token punctuation">(</span></span><span class="token punctuation">{</span> hostname<span class="token punctuation">:</span> <span class="token string">'example.com'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+					res<span class="token punctuation">.</span><span class="token function">setEncoding<span class="token punctuation">(</span></span><span class="token string">'utf8'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+					res<span class="token punctuation">.</span><span class="token function">on<span class="token punctuation">(</span></span><span class="token string">'data'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>chunk<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+					console<span class="token punctuation">.</span><span class="token function">log<span class="token punctuation">(</span></span>chunk<span class="token punctuation">)</span><span class="token punctuation">;</span>
+					<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+					<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">end<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+					</code></pre>
 
                 </div>
             </div>
