@@ -93,73 +93,20 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 					<h2 class="section-heading">NodeJS Introduction</h2>
-
-					<p>We'll start off with a formal definition. According to Angular's <a href="https://docs.angularjs.org/guide">official documentation</a>, it is defined as follows:</p>
+					<p>Last post, we covered the basics of AngularJS. Today, we'll be looking at some of the basics of another important tool: NodeJS.</p>
+					<p>Node.js has a formal definition as follows:</p>
 					
-					<p><i>"AngularJS is a structural framework for dynamic web apps. It lets you use HTML as your template language and lets you extend HTML's syntax to express your 
-					application's components clearly and succinctly. Angular's data binding and dependency injection eliminate much of the code you would otherwise have to write."</i></p>
+					<p><i>"Node.js is an open source, cross-platform runtime environment for server-side and networking applications. Node.js applications are written 
+					in JavaScript, and can be run within the Node.js runtime on OS X, Microsoft Windows, Linux, FreeBSD, and IBM i."</i></p>
                     
-					<p>In other words, its a widely used javascript library which allows for a <i>lot</i> of functionality, and saves you from having to write a <i>lot</i> of code.</p>
-                    <h2 class="section-heading">Example</h2>
-					<p>Lets look at an example, once again courtesy of Angular's <a href="https://docs.angularjs.org/guide">official documentation</a>.</p>
-					<p>In this example, we'll be building a very simple web based invoice form. It will contain:</p>
-					<ul>
-						<li>A text field for quantity, which can be incremented.</li>
-						<li>A text field for costs, which can also be incremented.</li>
-						<li>A Total field, which will be calculated and updated in real time.</li>
-					</ul>
-					<p>Normally, this project would take quite a bit of code to accomplish. However, through the use of AngularJS we can build it in just a few minutes by
-					expanding our HTML's functionality.</p>
-					
-					<!--Pasted in example-->
-											<div class="ng-scope">
-						  <a ng-click="openPlunkr('examples/example-guide-concepts-1')" class="btn pull-right">
-							<i class="glyphicon glyphicon-edit">&nbsp;</i>
-							Edit in Plunker</a>
-
-						  <div class="runnable-example ng-scope" path="examples/example-guide-concepts-1" name="guide-concepts-1" ng-app-included="true"><!-- ngIf: tabs --><nav class="runnable-example-tabs ng-scope" ng-if="tabs">  <!-- ngRepeat: tab in tabs track by $index --><a ng-class="{active:$index==activeTabIndex}" ng-repeat="tab in tabs track by $index" href="" class="btn ng-binding ng-scope active" ng-click="setTab($index)">    index.html  </a><!-- end ngRepeat: tab in tabs track by $index --></nav><!-- end ngIf: tabs -->
-
-						  
-							<div style="display: block;" class="runnable-example-file" name="index.html" language="html" type="html">
-							  <pre><code><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-app</span><span class="pln"> </span><span class="atn">ng-init</span><span class="pun">=</span><span class="atv">"qty=1;cost=2"</span><span class="tag">&gt;</span><span class="pln">
-						  </span><span class="tag">&lt;b&gt;</span><span class="pln">Invoice:</span><span class="tag">&lt;/b&gt;</span><span class="pln">
-						  </span><span class="tag">&lt;div&gt;</span><span class="pln">
-							Quantity: </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"number"</span><span class="pln"> </span><span class="atn">min</span><span class="pun">=</span><span class="atv">"0"</span><span class="pln"> </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">"qty"</span><span class="tag">&gt;</span><span class="pln">
-						  </span><span class="tag">&lt;/div&gt;</span><span class="pln">
-						  </span><span class="tag">&lt;div&gt;</span><span class="pln">
-							Costs: </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"number"</span><span class="pln"> </span><span class="atn">min</span><span class="pun">=</span><span class="atv">"0"</span><span class="pln"> </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">"cost"</span><span class="tag">&gt;</span><span class="pln">
-						  </span><span class="tag">&lt;/div&gt;</span><span class="pln">
-						  </span><span class="tag">&lt;div&gt;</span><span class="pln">
-							</span><span class="tag">&lt;b&gt;</span><span class="pln">Total:</span><span class="tag">&lt;/b&gt;</span><span class="pln"> {{qty * cost | currency}}
-						  </span><span class="tag">&lt;/div&gt;</span><span class="pln">
-						</span><span class="tag">&lt;/div&gt;</span></code></pre>
-							</div>
-						  
-
-							<!--This is referencing a local copy of the example file-->
-							<iframe class="runnable-example-frame" src="angularExample.html" name="example-guide-concepts-1"></iframe>
-						  </div>
-						</div>
-					<!--Pasted in example-->
-					
-					<p>Lets evaluate our example, one step at a time.</p>
-					<p>First, let us establish that we have two text fields: <b>Quantity</b> and and <b>Cost</b>. Each are created with an input tag, with a defined type of "number." 
-					Upon looking at our code, we can see that each of these fields is given the name "qty" and "cost" within something called "<b>ng-model</b>".</p>
-					<p>"ng-model" is our first example of what we call a <b>Directive</b> in Angular. Put simply, a directive is <i>a marker attached to an HTML element</i> that
-					tells Angular how to treat it. In our case, the ng-model directive is used <i>to bind an input, select, or textarea element to a property.</i></p>
-					<p>Lets move to the top of the code. At the top of the example, we see something called "<b>ng-init</b>." This is another directive, which allows us to evaluate
-					the contents of a given property. Since it has access to our two text fields through the use of ng-model, <i>we can use it to initiate those two text fields with
-					default values. (qty = 1, cost = 2)</i></p>
-					<p>Finaly, we move to the end of the example. Towards the bottom, you'll see our Total field. Inside of a set of double curly braces "<b>{{ }}</b>",
-					we see a mathematical statement: qty * cost. This is clearly the calculation needed to evaluate our previous two fields. However, by placing this inside of
-					a set of double curly braces, we tell Angular that we want it to <i>evaluate that expression for us</i>. At the end of that statement, we see a pipe ( | ) followed
-					by the word "currecny." By placing these within the braces, but after our equation, we're telling Angular to <i>automatically display the results in a monetary format</i>.</p>
-                    
-					
-					<h2 class="section-heading">Conclusion</h2>
-					<p>We've only scratched the surface when it comes to the functionality of Angular. In this single post we've covered the concepts of appending HTML elements
-					with directives to increase functionality, as well as using Angular to evaluate mathematical functions.</p>
-					<p>If you want to know more about Angular, I'd highly reccomend visiting CodeSchool's <a href="https://www.codeschool.com/courses/shaping-up-with-angular-js">Shaping Up with AngularJS</a> tutorial.</p>
+					<p>More specifically, it's an event-driven framework based on and built ontop of Chome's built-in javascript engine. However, its functionality extends far beyond that of a traditional
+					javascript library. Not only does it have all the functionality brought about by javascript, but it also features a good amount of code specifically allowing it to interface with most commonly found
+					servers or filesystems.</p>
+					<p>However, there's even more that sets it apart. Node.js is often labeled as a non-blocking I/O system. This means that it can handle 
+					multiple activities concurrently without ever making a program wait/sleep. Ontop of that, it can also handle these concurrent activities without resorting to using up multiple threads. This really sets it
+					apart from more traditional languages, which are based heavily on the idea of sequential execution.</p>
+					<p>To demonstrate this clearly, we'll use a code sample pulled from a wonderful Node.js tutorial hosted 
+					over at <a href="https://www.airpair.com/javascript/node-js-tutorial#1-1-what-s-making-node-more-popular-than-rails-and-other-alternatives-">airpair.<a></p>
 
                 </div>
             </div>
@@ -201,3 +148,4 @@
 </body>
 
 </html>
+
